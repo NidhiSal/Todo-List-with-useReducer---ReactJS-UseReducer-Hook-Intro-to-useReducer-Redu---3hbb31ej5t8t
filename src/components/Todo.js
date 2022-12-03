@@ -10,4 +10,3 @@ const Todo = ({title,dispatch,id}) => {
 
 
 export { Todo }
-
