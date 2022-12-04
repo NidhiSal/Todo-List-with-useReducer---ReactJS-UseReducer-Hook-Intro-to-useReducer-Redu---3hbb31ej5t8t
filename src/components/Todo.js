@@ -1,9 +1,12 @@
-const todoReducer = (state, action) => {
-    switch (action.type) {
-        case 'delTodo': return state.filter(td => td.id !== action.id);
-        case 'addTodo': return [...state,action.obj];
-        default:  return state;
-    }
+import React from 'react';
+const Todo = ({title,dispatch,id}) => {
+    return (
+        <div className='todo'>
+            <div className="todo-title">{title}</div>
+            <button className='todo-delete' onClick={()=>{dispatch({type:'delTodo',id})}}>Remove</button>
+        </div>
+    )
 }
 
-export { todoReducer }
+
+export { Todo }
